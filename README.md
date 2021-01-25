@@ -15,8 +15,7 @@ The application will be a dashboard application, which will display statuses of 
   - Added stats and repo info in dashboard.
 - I haven't used react for almost 2.5 years and felt a bit rusty at times and I didn't have any prior knowledge of the testing workflow in react therefore I skipped tests.
 - Tried to implement base designs provided in the Figma file.
-- Since the application uses an auth server and open credentials for the GitHub O2Auth pipeline deployment is a bit tricky. I'm working on it still.
-
+- Migrated from GitHub Pages to Netlify because of SPA routing problems.
 
 ## Website
 Explore the application from the following URL: <br>
