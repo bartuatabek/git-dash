@@ -5,9 +5,9 @@ require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 
 const config = {
     client_id: '836f35dd5231a7d99587',
-    redirect_uri: 'https://bartuatabek.github.io/git-dash/login',
+    redirect_uri: 'https://gitdash.cf/login',
     client_secret: 'c27aca8e0c3000720c6e7f4514e1b05a846564fd',
-    proxy_url: 'https://bartuatabek.github.io/git-dash:5000/authenticate'
+    proxy_url: 'https://gitdash.cf:5000/authenticate'
 };
 
 const envVarsSchema = Joi.object({
