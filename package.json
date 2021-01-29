@@ -1,5 +1,5 @@
 {
-  "name": "git-dash",
+  "name": "@bartuatabek/git-dash",
   "version": "1.0.1",
   "description": "SPA GitHub client by Bartu Atabek",
   "homepage": "https://gitdash.cf",
@@ -49,6 +49,6 @@
     "url": "git+https://github.com/bartuatabek/git-dash.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@bartuatabek"
+    "registry": "https://npm.pkg.github.com"
   }
 }
