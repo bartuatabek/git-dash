@@ -1,13 +1,14 @@
 {
   "name": "git-dash",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "SPA GitHub client by Bartu Atabek",
+  "homepage": "https://gitdash.cf",
   "main": "index.js",
   "author": "Bartu Atabek",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"cd server && nodemon index.js \" \"react-scripts start\" ",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build && echo '/* /index.html  200' | cat >build/_redirects ",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
@@ -26,13 +27,9 @@
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.12.1",
-    "concurrently": "^5.1.0",
     "dateformat": "^4.5.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "joi": "^17.3.0",
     "node-sass": "4.13.1",
-    "nodemon": "^2.0.7",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
@@ -46,5 +43,12 @@
     "eslint-plugin-flowtype": "3.13.0",
     "typescript": "3.7.5",
     "body-parser": "^1.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartuatabek/git-dash.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@bartuatabek"
   }
 }

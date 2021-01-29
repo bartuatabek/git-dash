@@ -17,6 +17,8 @@ import {
     Col
 } from "reactstrap";
 
+import SpinnerPage from "../../components/Spinner/SpinnerPage";
+
 import github from 'assets/img/icons/common/github.svg';
 
 function Login() {
@@ -40,14 +42,33 @@ function Login() {
                 code: newUrl[1]
             };
 
-            const proxy_url = state.proxy_url;
-
             // Use code parameter and other parameters to make POST request to proxy_server
-            fetch(proxy_url, {
+            const { code } = requestData;
+
+            const form_data = new FormData();
+            form_data.append("client_id", "836f35dd5231a7d99587");
+            form_data.append("client_secret", "c27aca8e0c3000720c6e7f4514e1b05a846564fd");
+            form_data.append("code", code);
+            form_data.append("redirect_uri", "https://gitdash.cf/login");
+
+            // Request to exchange code for an access token
+            fetch(`https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token`, {
                 method: "POST",
-                body: JSON.stringify(requestData)
+                body: form_data,
             })
-                .then(response => response.json())
+                .then((response) => response.text())
+                .then((paramsString) => {
+                    let params = new URLSearchParams(paramsString);
+                    const access_token = params.get("access_token");
+
+                    // Request to return data of a user that has been authenticated
+                    return fetch(`https://api.github.com/user`, {
+                        headers: {
+                            Authorization: `token ${access_token}`,
+                        },
+                    });
+                })
+                .then((response) => response.json())
                 .then(data => {
                     dispatch({
                         type: "LOGIN",
@@ -65,6 +86,22 @@ function Login() {
 
     if (state.isLoggedIn) {
         return <Redirect to="/dashboard"/>;
+    }
+
+    if (data.isLoading) {
+       return (
+           <>
+               <Col lg="4" md="7" className="py-lg-6">
+                   <Card className="bg-secondary shadow border-0">
+                       <CardHeader className="bg-transparent pb-5">
+                           <div className="text-muted text-center mt-2 mb-3">
+                               <SpinnerPage/>
+                           </div>
+                       </CardHeader>
+                   </Card>
+               </Col>
+           </>
+       );
     }
 
     return (

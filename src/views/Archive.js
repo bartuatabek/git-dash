@@ -259,8 +259,10 @@ class Archive extends React.Component {
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td className="text-center">
-                                                <SpinnerPage/>
+                                            <td colSpan={6}>
+                                                <div className="btn-wrapper text-center">
+                                                    <SpinnerPage/>
+                                                </div>
                                             </td>
                                         </tr>
                                         </tbody>

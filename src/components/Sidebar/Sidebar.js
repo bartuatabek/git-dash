@@ -7,7 +7,7 @@
 
 /*eslint-disable*/
 import React from "react";
-import { NavLink as NavLinkRRD, Link } from "react-router-dom";
+import {NavLink as NavLinkRRD, Link} from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 
@@ -32,7 +32,7 @@ import {
 class Sidebar extends React.Component {
   state = {
     collapseOpen: false,
-    avatar_url: '',
+    avatar_url: ''
   };
 
   constructor(props) {
@@ -49,6 +49,10 @@ class Sidebar extends React.Component {
   // verifies if routeName is the one active (in browser input)
   activeRoute(routeName) {
     return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
+  }
+
+  handleLogout() {
+    localStorage.setItem("isLoggedIn", "false");
   }
 
   // toggles collapse between opened and closed (true/false)
@@ -201,7 +205,7 @@ class Sidebar extends React.Component {
             </Nav>
             <Nav className="mb-md-3" navbar>
               <NavItem className="active-pro active">
-                <NavLink >
+                <NavLink href="/login" onClick={() => this.handleLogout()}>
                   <i className="ni ni-user-run" />
                   Sign Out
                 </NavLink>

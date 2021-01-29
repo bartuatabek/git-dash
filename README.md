@@ -1,10 +1,35 @@
 # GitDash (SPA GitHub Application)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f5c9c1d6-e2b6-46a9-aaba-415227711daf/deploy-status)](https://app.netlify.com/sites/romantic-bassi-78afb9/deploys)
+<img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 
 GithDash is a Single Page Application that retrieves data from Github endpoints and displays it.
 The application will be a dashboard application, which will display statuses of the selected GitHub projects.
 
-## Design Decisions
+## Table of Contents
+
+* [Features](#features)
+* [Design Decisions](#design-decisions)
+* [Website](#website)
+* [Used Resources](#used-resources)
+* [Quick Start](#quick-start)
+* [File Structure](#file-structure)
+* [Browser Support](#browser-support)
+* [GitHub API Documentation](#github-api-documentation)
+* [Build](#build)
+* [Run](#run)
+* [Licensing](#licensing)
+
+#### Features
+  - Search and add new GitHub projects to the project list. Remove project from the project list.
+    - The list of the projects are stored at local storage for the next visit.
+    - GitHub account integration to access private repositories.
+  - List the projects in a single page. The list can contain some summaries (project description, project link etc.)
+    - Interface offers paginated results for the ease of surfing.
+  - Display project details such as latest activities (last commits, last issues etc.) or general status (open PR count, open issue count etc.). Each project detail page should be bookmarked on its own.
+    - Saved projects' data represented at dashboard as additional information
+
+
+#### Design Decisions
 - Used *create-react-app* to fast-forward project creation & foundations.
 - Used css templates from multiple resources in order to have responsive & elegant design system which is coherent across the application.
 -Customized many provided templates to create a unique design & style.
@@ -17,9 +42,9 @@ The application will be a dashboard application, which will display statuses of 
 - Tried to implement base designs provided in the Figma file.
 - Migrated from GitHub Pages to Netlify because of SPA routing problems.
 
-## Website
-Explore the application from the following URL: <br>
-[**GitDash (Coming Soon)**](https://gitdash.cf)
+#### Website
+Explore the application from the following URL:
+[**GitDash**](https://gitdash.cf)
 
 #### Used Resources
 During the development of this dashboard, I have used many existing resources from awesome developers.
@@ -43,17 +68,9 @@ During the development of this dashboard, I have used many existing resources fr
 + [react-to-print v2.1.0](https://github.com/gregnb/react-to-print#readme)
 + [reactstrap v8.0.0](https://reactstrap.github.io/)
 
-## Table of Contents
-
-* [Quick Start](#quick-start)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Design](#design)
-* [Licensing](#licensing)
 
 ## Quick start
-
-## File Structure
+### File Structure
 
 Within the git-dash directory you'll find the following directories and files:
 
@@ -68,6 +85,9 @@ Git-Dash
 └── src
     ├── index.js
     ├── routes.js
+    ├── store
+    │   ├── reducer
+    │   │   ├── index.js
     ├── assets
     │   ├── css
     │   │   ├── argon-dashboard-pro-react.css
@@ -120,29 +140,15 @@ Git-Dash
         ├── Explore.js
         ├── Archive.js
         ├── RepoDetail.js
-        └── pages
+        └── auth
             ├── Login.js
 ```
 
-## Browser Support
+### Browser Support
 
-At present, I tired to support the last two versions of the following browsers:
+At present, GitDash supports the last two versions of the following browsers:
 
 <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-
-
-## Design
-
-Design resources includina a Figma/Sketch file can be accessed from the repository.
-
-## Features
-  - Search and add new GitHub projects to the project list. Remove project from the project list.
-    - The list of the projects are stored at local storage for the next visit.
-    - GitHub account integration to access private repositories.
-  - List the projects in a single page. The list can contain some summaries (project description, project link etc.)
-    - Interface offers paginated results for the ease of surfing.
-  - Display project details such as latest activities (last commits, last issues etc.) or general status (open PR count, open issue count etc.). Each project detail page should be bookmarked on its own.
-    - Saved projects' data represented at dashboard as additional information
 
 ## GitHub API Documentation
 [**GitHub API Documentation**](https://docs.github.com/en/rest)
