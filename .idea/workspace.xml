@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19b2c163-b113-4b4a-a7b5-f3f5dd2b8a3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Settings/Settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Archive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Archive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Explore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Explore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/Login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +22,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1nYTjvGS29eE3d0oa6yLEK7N1hg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -62,6 +55,8 @@
       <workItem from="1611692583482" duration="34000" />
       <workItem from="1611692652504" duration="5501000" />
       <workItem from="1611931504196" duration="4907000" />
+      <workItem from="1612634688394" duration="1190000" />
+      <workItem from="1612709915573" duration="411000" />
     </task>
     <servers />
   </component>
