@@ -52,7 +52,7 @@ function Login() {
             form_data.append("redirect_uri", "https://gitdash.cf/login");
 
             // Request to exchange code for an access token
-            fetch(`https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token`, {
+            fetch(`https://nameless-waters-21239.herokuapp.com/https://github.com/login/oauth/access_token`, {
                 method: "POST",
                 body: form_data,
             })
